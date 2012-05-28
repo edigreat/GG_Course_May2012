@@ -18,7 +18,7 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate (checa el esquema que corresponda)', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE"
-            logSql = true //Habilita log para hibernate
+            logSql = false //Habilita log para hibernate
 			formatSql = true  
         }
     }
