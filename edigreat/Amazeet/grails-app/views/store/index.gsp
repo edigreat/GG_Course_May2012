@@ -7,7 +7,7 @@
 
 <body>
 <g:remoteLink action="addItemAsync" update="actualizame">
-hola mundo con ajax 
+hola mundo con ajax
 </g:remoteLink>
 <br />
 <div id="actualizame"> </div>
@@ -28,10 +28,10 @@ hola mundo con ajax
 				<td>
 				&nbsp;
 				</td>
-		
+
 			</tr>
 			</thead>
-			
+
 			<tbody>
 			<g:each in="${products}" var="p">
 			<tr>
@@ -39,18 +39,19 @@ hola mundo con ajax
 			<td>$ ${p.price}</td>
 			<td><store:showProduct url="${p.urlImage}" size="small" /> </td>
 			<td>
-			<g:form action="addItem">
+			<g:formRemote name="frmAdditem" url="[action:'addItemAsync']" update="[success: 'divshoppingCart']" >
 				<g:hiddenField name="productId" value="${p.id}"/>
 				<g:select name="quantity" from="${1..9}"/>
 				<g:submitButton name="submit" value="Agregar"/>
-			</g:form>
+			</g:formRemote>
 			</td>
 			</tr>
 			</g:each>
-			
+
 			</tbody>
 
 	</table>
 
 </body>
 </html>
+
