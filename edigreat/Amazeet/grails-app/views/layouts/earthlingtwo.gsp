@@ -48,6 +48,8 @@ Released   : 20090918
 		</g:if>
 		<div class="post">
 		<g:layoutBody />
+      
+      <g:javascript library="application"/>
 		<r:layoutResources />
 		
 		</div>
