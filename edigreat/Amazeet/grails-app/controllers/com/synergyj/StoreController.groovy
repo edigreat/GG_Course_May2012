@@ -90,5 +90,21 @@ class StoreController {
 		}
 
 
+      def showShoppingCart()
+      {
+         render(template: "/store/confirmCart")
+      }
+
+      def cancelShoppingCart()
+      {
+         session.shoppingCart=null
+		   redirect action:'index'
+      }
+
+
+      def createOrder()
+      {
+
+      }
 }
 
