@@ -17,7 +17,10 @@ Ya estas comprando en la tienda
 	</ul>
 	<br />
 
-	<b>Total : ${session.totalCompra}</b>
+	<b>Total : ${session.totalCompra}</b>     
+
+   <input type="button" id="button" value="Ordenar" />
+
 
 </g:else>
 
