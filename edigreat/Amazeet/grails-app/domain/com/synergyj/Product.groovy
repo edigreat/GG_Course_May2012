@@ -1,8 +1,10 @@
 package com.synergyj
 
+import groovy.transform.*
+@EqualsAndHashCode
 class Product {
 
-    String name 
+    String name
     String description
     String technicalDetails
     String sku
@@ -10,8 +12,8 @@ class Product {
     Date       dateCreated
     Date       lastUpdated
     String     urlImage
-//    static belongsTo = [category:Category]   
-  
+//    static belongsTo = [category:Category]
+
     static constraints = {
         name nullable:false,blank:false,size:3..50
         description nullable:false,blank:false,size:1..1000
@@ -21,3 +23,4 @@ class Product {
 		urlImage url:true,size:10..250
     }
 }
+
