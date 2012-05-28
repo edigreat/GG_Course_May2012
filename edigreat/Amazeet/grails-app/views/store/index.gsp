@@ -37,7 +37,7 @@ hola mundo con ajax
 			<tr>
 			<td>${p.name}</td>
 			<td>$ ${p.price}</td>
-			<td><store:showProduct url="${p.urlImage}" size="small" /> </td>
+			<td><!-- store:showProduct url="${p.urlImage}" size="small" / --> </td>
 			<td>
 			<g:formRemote name="frmAdditem" url="[action:'addItemAsync']" update="[success: 'divshoppingCart']" >
 				<g:hiddenField name="productId" value="${p.id}"/>
